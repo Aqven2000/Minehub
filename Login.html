@@ -16,7 +16,8 @@
                     }
                     else
                     {
-                        window.location.href = '..\Minehub\index.html';
+                        localStorage.setItem("authenticated", "true");
+                        window.location.href = 'loading.html';
                         return true;
                     }
                 }
@@ -25,7 +26,7 @@
         </head>
         <body>
             <div id="log_form">
-                <form  action="..\Minehub\index.html">
+                <form  action="loading.html">
                     <label>Login:</label>
                     </br>
                     <input type="text" id="login">
