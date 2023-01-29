@@ -1,0 +1,46 @@
+<!DOCTYPE html> 
+    <html>
+        <head>
+            <title>Minecraft Login</title>
+            <link rel="stylesheet" href="Login.css">
+            <meta charset="UTF-8">
+
+            <script>
+                function isValid(){
+                    var password = document.getElementById('password').value;
+                    var login = document.getElementById('login').value
+                    
+                    if (password != 'admin' || login != 'admin') {
+                        alert('Wrong Password');
+                        event.preventDefault();
+                    }
+                    else
+                    {
+                        window.location.href = '..\Minehub\index.html';
+                        return true;
+                    }
+                }
+
+            </script>
+        </head>
+        <body>
+            <div id="log_form">
+                <form  action="..\Minehub\index.html">
+                    <label>Login:</label>
+                    </br>
+                    <input type="text" id="login">
+                    </br>
+                    <label>Haslo:</label>
+                    </br>
+                    <input type="password" id="password">
+                    </br>
+                    <button type="submit" id="go_pass" onclick=isValid()>Zaloguj</button>
+                    
+                </form>
+            </div>
+
+            
+        <!-- login: admin password: admin -->
+        </body>
+
+    </html>
